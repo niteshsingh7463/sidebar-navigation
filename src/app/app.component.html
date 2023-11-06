@@ -2,12 +2,23 @@
 <i class="fa-solid fa-bars"></i> -->
 
 <div class="container-fluid g-0">
-  <app-header (sideNavToggled)="sideNavStatus = $event;"></app-header>
   <main>
     <app-sidebar [sideNavStatus]="sideNavStatus" 
     [ngClass]="{'app-sidebar-open': sideNavStatus}"></app-sidebar>
 
-    <div class="display-area p-3" [ngClass]="{'display-area-shrink': sideNavStatus}">
+    <div class="display-area" [ngClass]="{'display-area-shrink': sideNavStatus}">
+      
+  <app-header (sideNavToggled)="sideNavStatus = $event;"></app-header>
+      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
       <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
     </div>
   </main>
