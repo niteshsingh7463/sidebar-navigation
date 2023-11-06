@@ -98,6 +98,7 @@ app-sidebar {
     top: 100px;
     left: 50px;
     transition: left 250ms ease-in;
+    z-index: 5;
 }
 
 .sidebar-toggler-open {
