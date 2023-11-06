@@ -36,18 +36,20 @@ app-sidebar {
     left: 250px;
 }
 
-.display-area-shrink {
-    @media only screen and (max-width: 450px) {
-        width: calc(100% - 60px);
-        left: 60px;
-      }
-    }
 
     @media only screen and (max-width: 450px) {
-        app-sidebar {
-            width: 0px;
-            border: none;
-            z-index: 1;
-        }     
+        .display-area-shrink {
+        width: 100%;
+        left: 0px;
       }
+      .display-area{
+        width: 100%;
+        left: 0px;
+      }
+      app-sidebar {
+        width: 0px;
+        border: none;
+        z-index: 1;
+    } 
+    }
     
