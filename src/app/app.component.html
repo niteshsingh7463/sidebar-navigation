@@ -3,23 +3,29 @@
 
 <div class="container-fluid g-0">
   <main>
-    <app-sidebar [sideNavStatus]="sideNavStatus" 
-    [ngClass]="{'app-sidebar-open': sideNavStatus}"></app-sidebar>
+    <div class="overlay" [ngClass]="{'display-overlay': sideNavStatus}" (click)="sideNavStatus=false"></div>
+    <app-sidebar [sideNavStatus]="sideNavStatus" [ngClass]="{'app-sidebar-open': sideNavStatus}"></app-sidebar>
+
+    <div class="sidebar-toggler" [ngClass]="{'sidebar-toggler-open': sideNavStatus}"
+      (click)="sideNavStatus=!sideNavStatus"></div>
 
     <div class="display-area" [ngClass]="{'display-area-shrink': sideNavStatus}">
-      
-  <app-header (sideNavToggled)="sideNavStatus = $event;"></app-header>
-      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
-      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
-      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
-      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
-      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
-      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
-      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
-      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
-      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
-      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
-      <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+
+      <app-header [menuStatus]="sideNavStatus" (sideNavToggled)="sideNavStatus = $event;"></app-header>
+
+      <div class="main-content-area p-3 m-5">
+        <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+        <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+        <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+        <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+        <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+        <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+        <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+        <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+        <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+        <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+        <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
+      </div>
     </div>
   </main>
 </div>

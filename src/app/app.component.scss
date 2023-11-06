@@ -5,16 +5,18 @@ app-header {
     height: 4rem;
     z-index: 2;
 }
+
 main {
     position: absolute;
     width: 100%;
     z-index: 1;
 }
+
 app-sidebar {
-    position: absolute;
+    position: fixed;
     left: 0rem;
     width: 60px;
-    height: calc(100vh - 4rem);
+    height: 100%;
     border: 2px solid #4A4E6D;
     box-shadow: 0px 0px 10px #4A4E6D;
     background-color: #4A4E6D !important;
@@ -22,34 +24,82 @@ app-sidebar {
     white-space: nowrap;
     transition: width 250ms ease-in;
 }
+
 .app-sidebar-open {
     width: 250px !important;
 }
+
 .display-area {
     position: absolute;
     left: 60px;
     width: calc(100% - 60px);
-    transition: left 250ms ease-in ,width 250ms ease-in;
+    transition: left 250ms ease-in, width 250ms ease-in;
 }
+
 .display-area-shrink {
     width: calc(100% - 250px);
     left: 250px;
 }
 
 
-    @media only screen and (max-width: 450px) {
-        .display-area-shrink {
+@media only screen and (max-width: 450px) {
+    .display-area-shrink {
         width: 100%;
         left: 0px;
-      }
-      .display-area{
+
+    }
+
+    .display-area {
         width: 100%;
         left: 0px;
-      }
-      app-sidebar {
+    }
+
+    app-sidebar {
         width: 0px;
         border: none;
-        z-index: 1;
-    } 
+        z-index: 4;
+        transition: width 150ms ease-in;
+        height: calc(100vh - 2rem);
+        top: 1rem;
     }
-    
+
+    .display-overlay {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .sidebar-toggler {
+        display: none;
+    }
+}
+
+.overlay {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 500ms;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    cursor: pointer;
+}
+
+
+.sidebar-toggler {
+    width: 20px;
+    height: 20px;
+    background-color: aquamarine;
+    position: fixed;
+    top: 100px;
+    left: 50px;
+    transition: left 250ms ease-in;
+}
+
+.sidebar-toggler-open {
+    left: 240px !important;
+}
