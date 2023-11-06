@@ -91,16 +91,26 @@ app-sidebar {
 
 
 .sidebar-toggler {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-color: aquamarine;
     position: fixed;
     top: 100px;
-    left: 50px;
+    left: 45px;
     transition: left 250ms ease-in;
     z-index: 5;
+    background: #5D6284; 
+    border-radius: 9999px; 
+    border: 1px #5D6284 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        height: 14px;
+        width: 14px;
+    }
 }
 
 .sidebar-toggler-open {
-    left: 240px !important;
+    left: 235px !important;
 }

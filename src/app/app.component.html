@@ -6,8 +6,9 @@
     <div class="overlay" [ngClass]="{'display-overlay': sideNavStatus}" (click)="sideNavStatus=false"></div>
     <app-sidebar [sideNavStatus]="sideNavStatus" [ngClass]="{'app-sidebar-open': sideNavStatus}"></app-sidebar>
 
-    <div class="sidebar-toggler" [ngClass]="{'sidebar-toggler-open': sideNavStatus}"
-      (click)="sideNavStatus=!sideNavStatus"></div>
+    <div class="sidebar-toggler" [ngClass]="{'sidebar-toggler-open': sideNavStatus}" (click)="sideNavStatus=!sideNavStatus">
+      <img src="../assets/chevrons-left.svg" alt="">
+    </div>
 
     <div class="display-area" [ngClass]="{'display-area-shrink': sideNavStatus}">
 
