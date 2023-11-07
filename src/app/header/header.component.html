@@ -1,13 +1,33 @@
-<nav class="navbar navbar-expand navbar-dark px-2" style="background-color: #4A4E6D !important">
+<nav class="navbar navbar-expand navbar-dark px-2">
     <div class="side-nav-button p-2 me-3 text-light" (click)="sideNavToggle()">
-        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars" style="color: #4A4E6D;"></i>
     </div>
 
-    <a class="navbar-brand px-4" href="#">InfoQuest</a>
-
     <!-- Search Input -->
-    <form class="d-flex-end">
-        <input class="form-control" type="search" placeholder="Search">
-    </form>
-
+    <div class="wrapper-header-desktop-view" [ngClass]="{'wrapper-header-closed-desktop-view': menuStatus}">
+        <div class="desktop-view-button-view">
+            <button>+ &nbsp;New Quest</button>
+        </div>
+        <div class="search-bar-header-desktop">
+            <form class="d-flex-end icon-search">
+                <img class="searchbar-icon" src="../../assets/images/searchbar.png" alt="search-bar-icons">
+                <input class="form-control" type="text" placeholder="Search for Quest  ">
+            </form>
+            <div class="icon-mobile-tablet-view">
+            <div class="bell-icon-wrapper">
+            <img src="../../assets/images/bell.png" alt="bell-icon">
+        </div>
+        <div class="profile-icon-wrapper">
+            <img src="../../assets/images/profile.png" alt="profile-icon">
+        </div>
+    </div>
+        </div>
+   
+    </div>
 </nav>
+<div class="form-search-mobile">
+    <form class="d-flex-end icon-search-mobile px-2">
+        <img class="searchbar-icon" src="../../assets/images/searchbar.png" alt="search-bar-icons">
+        <input class="form-control" type="text" placeholder="Search for Quest  ">
+    </form>
+</div>

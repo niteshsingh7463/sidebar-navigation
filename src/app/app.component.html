@@ -12,9 +12,9 @@
 
     <div class="display-area" [ngClass]="{'display-area-shrink': sideNavStatus}">
 
-      <app-header [menuStatus]="sideNavStatus" (sideNavToggled)="sideNavStatus = $event;"></app-header>
+      <app-header class="mobile-app-header" [menuStatus]="sideNavStatus" (sideNavToggled)="sideNavStatus = $event;"></app-header>
 
-      <div class="main-content-area p-3 m-5">
+      <div class="main-content-area">
         <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
         <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>
         <p class="fs-1 fw-bold fst-talic">Main Content Area Display</p>

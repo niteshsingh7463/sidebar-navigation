@@ -9,30 +9,34 @@ export class SidebarComponent implements OnInit{
   list =[
     {
       number: '1',
-      name:'home',
+      name:'InfoQuest Library',
       icon:'fa-solid fa-house'
     },
     {
       number: '2',
-      name:'Anlytics',
+      name:'Quest Drafts ',
       icon:'fa-solid fa-chart-line'
     },
     {
       number: '3',
-      name:'Products',
+      name:'Directory ',
       icon:'fa-solid fa-box'
     },
     {
       number: '4',
-      name:'order',
+      name:'Downloads ',
       icon:'fa-solid fa-cart-shopping'
     },
     {
       number: '5',
+      name:'Message Center',
+      icon:'fa-solid fa-gear'
+    },
+    {
+      number: '6',
       name:'Settings',
       icon:'fa-solid fa-gear'
     },
-
   ]
 
   @Input() sideNavStatus: boolean = false;
